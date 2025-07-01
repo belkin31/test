@@ -1,0 +1,39 @@
+{
+  "name": "Каталог",
+  "type": "directory",
+  "children": [
+    {
+      "name": "Молочные продукты",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Молоко 1л",
+          "type": "product",
+          "description": "Пастеризованное молоко",
+          "manufacturer": "Простоквашино",
+          "weight": "1 кг"
+        },
+        {
+          "name": "Сметана 20%",
+          "type": "product",
+          "description": "Сметана жирностью 20%",
+          "manufacturer": "Домик в деревне",
+          "weight": "0.5 кг"
+        }
+      ]
+    },
+    {
+      "name": "Хлебобулочные изделия",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Батон",
+          "type": "product",
+          "description": "Пшеничный батон",
+          "manufacturer": "Хлебозавод №3",
+          "weight": "0.4 кг"
+        }
+      ]
+    }
+  ]
+}

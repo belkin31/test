@@ -1,0 +1,83 @@
+/* Улучшенный общий фон и текст */
+body {
+  background: #f0f2f5;
+  color: #2c3e50;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Заголовок */
+header {
+  background-color: #2a9d8f;
+  color: white;
+  font-weight: 600;
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+}
+
+/* Сайдбар */
+.sidebar {
+  background-color: white;
+  box-shadow: inset -1px 0 0 #ddd;
+}
+
+/* Категории */
+.category {
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.25s;
+}
+.category:hover {
+  background-color: #e0f2f1;
+}
+
+/* Товары */
+.product {
+  padding: 0.6rem;
+  margin: 0.3rem 0;
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+.product:hover {
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+  transform: translateY(-2px);
+}
+
+/* Поле поиска */
+input[type="text"] {
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+input[type="text"]:focus {
+  outline: none;
+  border-color: #2a9d8f;
+  box-shadow: 0 0 5px #2a9d8faa;
+}
+
+/* Правая часть (детали) */
+.content {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.08);
+}
+
+.content h2 {
+  margin-top: 0;
+  font-weight: 700;
+  color: #2a9d8f;
+}
+
+.content p {
+  line-height: 1.4;
+  margin: 0.5rem 0;
+}

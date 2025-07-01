@@ -16,11 +16,7 @@ npm run dev
 
 ## Сборка
 
-```bash
-npm run build
-```
-
-### Под Windows:
+### Под Windows: (Терминал от имени Администратора)
 
 ```bash
 npm run build:win
@@ -32,8 +28,3 @@ npm run build:win
 npm run build:linux
 ```
 
-## Запуск
-
-```bash
-npm start
-```

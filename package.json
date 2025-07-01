@@ -1,0 +1,42 @@
+{
+  "name": "catalog-app",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "scripts": {
+    "dev": "concurrently \"npm:dev:*\"",
+    "dev:main": "electronmon src/main.js",
+    "dev:renderer": "vite",
+    "build:win": "vite build && electron-builder --win",
+    "build:linux": "vite build && electron-builder --linux",
+    "build:renderer": "vite build",
+    "start": "electron ."
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^6.0.0",
+
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0",
+    "electron-builder": "^24.0.0",
+    "electron": "^22.0.0",
+    "electronmon": "^1.0.0",
+    "vite": "^5.4.19"
+  },
+  "build": {
+    "appId": "com.example.catalogapp",
+    "productName": "CatalogApp",
+    "files": [
+      "dist",
+      "src",
+      "public",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}

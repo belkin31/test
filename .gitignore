@@ -1,0 +1,44 @@
+# node_modules
+node_modules/
+
+# Vite production build
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDEs and editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Electron build output
+/out/
+/build/
+release/
+*.exe
+*.dmg
+*.AppImage
+
+# Electron-builder cache
+/dist_electron/
+electron-builder.json
+*.tgz
+
+# Optional: dotenv files (if you use them)
+.env
+.env.*
