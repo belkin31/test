@@ -19,6 +19,62 @@
           "description": "Сметана жирностью 20%",
           "manufacturer": "Домик в деревне",
           "weight": "0.5 кг"
+        },
+        {
+          "name": "Йогурт натуральный",
+          "type": "product",
+          "description": "Йогурт без добавок",
+          "manufacturer": "Данон",
+          "weight": "0.3 кг"
+        },
+        {
+          "name": "Творог 5%",
+          "type": "product",
+          "description": "Творог низкой жирности",
+          "manufacturer": "Савушкин",
+          "weight": "0.2 кг"
+        },
+        {
+          "name": "Сыр Гауда",
+          "type": "product",
+          "description": "Твердый сыр Гауда",
+          "manufacturer": "Arla",
+          "weight": "0.3 кг"
+        },
+        {
+          "name": "Кефир 2.5%",
+          "type": "product",
+          "description": "Кефир средней жирности",
+          "manufacturer": "Простоквашино",
+          "weight": "0.9 кг"
+        },
+        {
+          "name": "Масло сливочное",
+          "type": "product",
+          "description": "Сливочное масло 82.5%",
+          "manufacturer": "Вкуснотеево",
+          "weight": "0.2 кг"
+        },
+        {
+          "name": "Сливки 10%",
+          "type": "product",
+          "description": "Сливки для кофе",
+          "manufacturer": "Домик в деревне",
+          "weight": "0.5 л"
+        },
+        {
+          "name": "Ряженка",
+          "type": "product",
+          "description": "Ряженка 4% жирности",
+          "manufacturer": "Савушкин",
+          "weight": "0.5 кг"
+        },
+        {
+          "name": "Сыр плавленый",
+          "type": "product",
+          "description": "Плавленый сыр с ветчиной",
+          "manufacturer": "Hochland",
+          "weight": "0.15 кг"
         }
       ]
     },
@@ -32,6 +88,485 @@
           "description": "Пшеничный батон",
           "manufacturer": "Хлебозавод №3",
           "weight": "0.4 кг"
+        },
+        {
+          "name": "Хлеб ржаной",
+          "type": "product",
+          "description": "Ржаной хлеб с семенами",
+          "manufacturer": "Хлебозавод №5",
+          "weight": "0.6 кг"
+        },
+        {
+          "name": "Булочка с изюмом",
+          "type": "product",
+          "description": "Сдобная булочка с изюмом",
+          "manufacturer": "Булочная №1",
+          "weight": "0.1 кг"
+        },
+        {
+          "name": "Круассан",
+          "type": "product",
+          "description": "Круассан с шоколадной начинкой",
+          "manufacturer": "Булочная №1",
+          "weight": "0.08 кг"
+        },
+        {
+          "name": "Багет",
+          "type": "product",
+          "description": "Французский багет",
+          "manufacturer": "Хлебозавод №3",
+          "weight": "0.3 кг"
+        },
+        {
+          "name": "Лаваш",
+          "type": "product",
+          "description": "Тонкий армянский лаваш",
+          "manufacturer": "Лавашная",
+          "weight": "0.2 кг"
+        }
+      ]
+    },
+    {
+      "name": "Мясные продукты",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Колбаса вареная",
+          "type": "product",
+          "description": "Вареная колбаса докторская",
+          "manufacturer": "Мясокомбинат",
+          "weight": "0.5 кг"
+        },
+        {
+          "name": "Сосиски молочные",
+          "type": "product",
+          "description": "Сосиски с молочным вкусом",
+          "manufacturer": "Мясокомбинат",
+          "weight": "0.4 кг"
+        },
+        {
+          "name": "Ветчина",
+          "type": "product",
+          "description": "Ветчина из свинины",
+          "manufacturer": "Дымов",
+          "weight": "0.3 кг"
+        },
+        {
+          "name": "Бекон",
+          "type": "product",
+          "description": "Копченый бекон",
+          "manufacturer": "Черкизово",
+          "weight": "0.2 кг"
+        },
+        {
+          "name": "Паштет печеночный",
+          "type": "product",
+          "description": "Паштет из говяжьей печени",
+          "manufacturer": "Мясокомбинат",
+          "weight": "0.15 кг"
+        }
+      ]
+    },
+    {
+      "name": "Напитки",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Вода газированная",
+          "type": "product",
+          "description": "Газированная минеральная вода",
+          "manufacturer": "Боржоми",
+          "weight": "0.5 л"
+        },
+        {
+          "name": "Сок апельсиновый",
+          "type": "product",
+          "description": "Натуральный апельсиновый сок",
+          "manufacturer": "Добрый",
+          "weight": "1 л"
+        },
+        {
+          "name": "Чай черный",
+          "type": "product",
+          "description": "Черный листовой чай",
+          "manufacturer": "Ahmad Tea",
+          "weight": "0.1 кг"
+        },
+        {
+          "name": "Кофе молотый",
+          "type": "product",
+          "description": "Молотый кофе арабика",
+          "manufacturer": "Lavazza",
+          "weight": "0.25 кг"
+        },
+        {
+          "name": "Квас",
+          "type": "product",
+          "description": "Традиционный русский квас",
+          "manufacturer": "Очаково",
+          "weight": "1 л"
+        }
+      ]
+    },
+    {
+      "name": "Кондитерские изделия",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Шоколад молочный",
+          "type": "product",
+          "description": "Молочный шоколад с орехами",
+          "manufacturer": "Аленка",
+          "weight": "0.1 кг"
+        },
+        {
+          "name": "Печенье овсяное",
+          "type": "product",
+          "description": "Овсяное печенье с изюмом",
+          "manufacturer": "Юбилейное",
+          "weight": "0.2 кг"
+        },
+        {
+          "name": "Конфеты карамель",
+          "type": "product",
+          "description": "Карамель с фруктовой начинкой",
+          "manufacturer": "Рот Фронт",
+          "weight": "0.25 кг"
+        },
+        {
+          "name": "Торт медовый",
+          "type": "product",
+          "description": "Медовый торт с кремом",
+          "manufacturer": "Медовик",
+          "weight": "0.8 кг"
+        },
+        {
+          "name": "Мармелад",
+          "type": "product",
+          "description": "Фруктовый мармелад",
+          "manufacturer": "Ударница",
+          "weight": "0.3 кг"
+        }
+      ]
+    },
+    {
+      "name": "Овощи",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Картофель",
+          "type": "product",
+          "description": "Свежий картофель",
+          "manufacturer": "Фермерское хозяйство",
+          "weight": "1 кг"
+        },
+        {
+          "name": "Морковь",
+          "type": "product",
+          "description": "Свежая морковь",
+          "manufacturer": "Фермерское хозяйство",
+          "weight": "0.5 кг"
+        },
+        {
+          "name": "Огурцы",
+          "type": "product",
+          "description": "Свежие огурцы",
+          "manufacturer": "Фермерское хозяйство",
+          "weight": "0.5 кг"
+        }
+      ]
+    },
+    {
+      "name": "Фрукты",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Яблоки",
+          "type": "product",
+          "description": "Яблоки сорта Гала",
+          "manufacturer": "Фруктовый сад",
+          "weight": "1 кг"
+        },
+        {
+          "name": "Бананы",
+          "type": "product",
+          "description": "Спелые бананы",
+          "manufacturer": "Тропик",
+          "weight": "0.8 кг"
+        },
+        {
+          "name": "Апельсины",
+          "type": "product",
+          "description": "Сочные апельсины",
+          "manufacturer": "Тропик",
+          "weight": "1 кг"
+        }
+      ]
+    },
+    {
+      "name": "Крупы",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Рис белый",
+          "type": "product",
+          "description": "Белый длиннозерный рис",
+          "manufacturer": "Мистраль",
+          "weight": "1 кг"
+        },
+        {
+          "name": "Гречка",
+          "type": "product",
+          "description": "Гречневая крупа",
+          "manufacturer": "Увелка",
+          "weight": "0.8 кг"
+        },
+        {
+          "name": "Овсянка",
+          "type": "product",
+          "description": "Овсяные хлопья",
+          "manufacturer": "Геркулес",
+          "weight": "0.5 кг"
+        }
+      ]
+    },
+    {
+      "name": "Макаронные изделия",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Спагетти",
+          "type": "product",
+          "description": "Спагетти из твердых сортов пшеницы",
+          "manufacturer": "Barilla",
+          "weight": "0.5 кг"
+        },
+        {
+          "name": "Макароны перья",
+          "type": "product",
+          "description": "Макароны в форме перьев",
+          "manufacturer": "Макфа",
+          "weight": "0.4 кг"
+        }
+      ]
+    },
+    {
+      "name": "Рыбные продукты",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Форель слабосоленая",
+          "type": "product",
+          "description": "Филе форели слабосоленое",
+          "manufacturer": "Рыбокомбинат",
+          "weight": "0.2 кг"
+        },
+        {
+          "name": "Скумбрия копченая",
+          "type": "product",
+          "description": "Скумбрия горячего копчения",
+          "manufacturer": "Рыбокомбинат",
+          "weight": "0.3 кг"
+        }
+      ]
+    },
+    {
+      "name": "Замороженные продукты",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Пельмени",
+          "type": "product",
+          "description": "Пельмени с говядиной",
+          "manufacturer": "Сибирская коллекция",
+          "weight": "0.8 кг"
+        },
+        {
+          "name": "Вареники с картофелем",
+          "type": "product",
+          "description": "Вареники с картофелем и грибами",
+          "manufacturer": "Сибирская коллекция",
+          "weight": "0.7 кг"
+        }
+      ]
+    },
+    {
+      "name": "Консервы",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Тунец в масле",
+          "type": "product",
+          "description": "Консервированный тунец в масле",
+          "manufacturer": "Рио",
+          "weight": "0.18 кг"
+        },
+        {
+          "name": "Горошек зеленый",
+          "type": "product",
+          "description": "Консервированный зеленый горошек",
+          "manufacturer": "Бондюэль",
+          "weight": "0.4 кг"
+        }
+      ]
+    },
+    {
+      "name": "Масла и соусы",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Масло подсолнечное",
+          "type": "product",
+          "description": "Рафинированное подсолнечное масло",
+          "manufacturer": "Золотая семечка",
+          "weight": "1 л"
+        },
+        {
+          "name": "Кетчуп",
+          "type": "product",
+          "description": "Томатный кетчуп",
+          "manufacturer": "Heinz",
+          "weight": "0.3 кг"
+        }
+      ]
+    },
+    {
+      "name": "Специи",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Перец черный",
+          "type": "product",
+          "description": "Черный перец молотый",
+          "manufacturer": "Котани",
+          "weight": "0.05 кг"
+        },
+        {
+          "name": "Соль морская",
+          "type": "product",
+          "description": "Морская соль крупного помола",
+          "manufacturer": "Котани",
+          "weight": "0.5 кг"
+        }
+      ]
+    },
+    {
+      "name": "Сухофрукты",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Изюм",
+          "type": "product",
+          "description": "Изюм золотистый",
+          "manufacturer": "Фруктовый сад",
+          "weight": "0.2 кг"
+        },
+        {
+          "name": "Курага",
+          "type": "product",
+          "description": "Курага без косточек",
+          "manufacturer": "Фруктовый сад",
+          "weight": "0.25 кг"
+        }
+      ]
+    },
+    {
+      "name": "Орехи",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Миндаль",
+          "type": "product",
+          "description": "Жареный миндаль",
+          "manufacturer": "Ореховая роща",
+          "weight": "0.2 кг"
+        },
+        {
+          "name": "Грецкий орех",
+          "type": "product",
+          "description": "Очищенные грецкие орехи",
+          "manufacturer": "Ореховая роща",
+          "weight": "0.15 кг"
+        }
+      ]
+    },
+    {
+      "name": "Чай и кофе",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Зеленый чай",
+          "type": "product",
+          "description": "Зеленый листовой чай",
+          "manufacturer": "Greenfield",
+          "weight": "0.1 кг"
+        },
+        {
+          "name": "Кофе в зернах",
+          "type": "product",
+          "description": "Кофе арабика в зернах",
+          "manufacturer": "Paulig",
+          "weight": "0.25 кг"
+        }
+      ]
+    },
+    {
+      "name": "Мороженое",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Мороженое пломбир",
+          "type": "product",
+          "description": "Классический пломбир в вафельном стаканчике",
+          "manufacturer": "Инмарко",
+          "weight": "0.1 кг"
+        },
+        {
+          "name": "Мороженое эскимо",
+          "type": "product",
+          "description": "Эскимо в шоколадной глазури",
+          "manufacturer": "Инмарко",
+          "weight": "0.08 кг"
+        }
+      ]
+    },
+    {
+      "name": "Детское питание",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Пюре яблочное",
+          "type": "product",
+          "description": "Яблочное пюре для детей",
+          "manufacturer": "ФрутоНяня",
+          "weight": "0.1 кг"
+        },
+        {
+          "name": "Каша овсяная",
+          "type": "product",
+          "description": "Овсяная каша для детей",
+          "manufacturer": "Нестле",
+          "weight": "0.2 кг"
+        }
+      ]
+    },
+    {
+      "name": "Бакалея",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Сахар",
+          "type": "product",
+          "description": "Сахар-песок",
+          "manufacturer": "Русский сахар",
+          "weight": "1 кг"
+        },
+        {
+          "name": "Мука пшеничная",
+          "type": "product",
+          "description": "Пшеничная мука высшего сорта",
+          "manufacturer": "Макфа",
+          "weight": "2 кг"
         }
       ]
     }

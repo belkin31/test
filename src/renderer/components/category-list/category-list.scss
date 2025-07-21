@@ -1,0 +1,31 @@
+.category-list {
+  box-sizing: border-box;
+  &__item {
+	padding: 0;
+	border-top: 1px solid;
+	cursor: pointer;
+
+	&:first-of-type {
+	  border-top: 0;
+	}
+  }
+  &__item-title {
+	padding: 1em 0;
+	display: flex;
+	align-items: center;
+  }
+
+  &__item-toggle {
+	display: flex;
+	justify-content: center;
+	transform: rotate(90deg);
+	padding: .5em;
+	align-items: center;
+	width: 1em;
+	transition: transform .1s;
+
+	&_open {
+	  transform: rotate(180deg);
+	}
+  }
+}
