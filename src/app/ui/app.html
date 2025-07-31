@@ -1,0 +1,17 @@
+<div :class="[route?.name ? `app-main_${route?.name}` : '', `app-main`]">
+  <router-view name="header" />
+  <router-view name="sidebar" />
+
+  <router-view v-slot="{ Component }">
+    <transition v-cloak name="fade" mode="out-in" appear>
+      <component
+        :is="Component"
+        :key="route?.path"
+        v-if="route?.meta?.waitForLoginProcessed ? isLoginProcessed : true "
+      />
+    </transition>
+  </router-view>
+  <router-view name="footer" />
+  <router-view name="sticky" />
+  <!--modal here-->
+</div>

@@ -1,0 +1,133 @@
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #25e39a30;
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+    color: #fff;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+
+    &--disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &__current {
+    font-weight: 500;
+    color: inherit;
+  }
+
+  &__flag {
+    width: 1.3125rem;
+    object-fit: contain;
+    height: 1rem;
+
+    &_ar {
+      background-image: url(@/shared/assets/flags/ar.svg);
+    }
+
+    &_ch {
+      background-image: url(@/shared/assets/flags/ch.svg);
+    }
+
+    &_de {
+      background-image: url(@/shared/assets/flags/de.svg);
+    }
+
+    &_en {
+      background-image: url(@/shared/assets/flags/en.svg);
+    }
+
+    &_es {
+      background-image: url(@/shared/assets/flags/es.svg);
+    }
+
+    &_fr {
+      background-image: url(@/shared/assets/flags/fr.svg);
+    }
+
+    &_hi {
+      background-image: url(@/shared/assets/flags/hi.svg);
+    }
+
+    &_ja {
+      background-image: url(@/shared/assets/flags/ja.svg);
+    }
+
+    &_ko {
+      background-image: url(@/shared/assets/flags/ko.svg);
+    }
+
+    &_pl {
+      background-image: url(@/shared/assets/flags/pl.svg);
+    }
+
+    &_pr {
+      background-image: url(@/shared/assets/flags/pr.svg);
+    }
+
+    &_ru {
+      background-image: url(@/shared/assets/flags/ru.svg);
+    }
+
+    &_th {
+      background-image: url(@/shared/assets/flags/th.svg);
+    }
+
+    &_tr {
+      background-image: url(@/shared/assets/flags/tr.svg);
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    min-width: 120px;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    z-index: 10;
+    overflow: hidden;
+    color: #ffffff;
+    background-color: #00000080;
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #25e39a30;
+      backdrop-filter: blur(4px);
+    }
+  }
+}
