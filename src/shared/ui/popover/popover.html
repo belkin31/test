@@ -1,0 +1,8 @@
+<div class="popover">
+  <div class="popover__trigger" @click="toggle">
+    <slot name="trigger" v-bind="toggle"></slot>
+  </div>
+  <div v-if="isOpen" class="popover__content">
+    <slot name="content"></slot>
+  </div>
+</div>

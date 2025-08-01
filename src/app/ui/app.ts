@@ -1,15 +1,14 @@
 import { defineComponent } from 'vue'
-import { useAuthStore } from '@/entities/auth/model'
 import { useRoute } from 'vue-router'
-import '@fontsource/montserrat'
+import '@fontsource/roboto'
+import './normalize.scss'
 
 export default defineComponent({
   components: {},
 
   setup() {
-    const auth = useAuthStore()
     const route = useRoute()
 
-    return { auth, route }
+    return { route }
   },
 })

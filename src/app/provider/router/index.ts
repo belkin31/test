@@ -1,5 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+const defaultLayout = {
+  header: () => import('@/widgets/header/index.ts')
+}
+
+
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -7,7 +12,8 @@ const router = createRouter({
       path: '/',
       name: 'home',
       components: {
-        default: () => import('@/pages/home'),
+        default: () => import('../../../pages/compare'),
+        ...defaultLayout,
       },
     },
     {
@@ -15,6 +21,7 @@ const router = createRouter({
       name: 'NotFound',
       components: {
         default: () => import('@/pages/404'),
+        ...defaultLayout,
       },
     },
   ],

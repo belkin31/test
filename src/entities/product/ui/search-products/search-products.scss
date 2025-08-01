@@ -1,0 +1,39 @@
+.search-products {
+  padding: 2.125em 1.125em;
+  display: flex;
+  flex-flow: column;
+  gap: 1.125em;
+
+  &__search {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  &__result-image {
+    height: 100%;
+  }
+
+  &__result-image-container {
+    max-height: 3.125em;
+    aspect-ratio: 1/1;
+  }
+
+  &__result-list {
+    display: flex;
+    flex-flow: column;
+    gap: 2em;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__result-list-item {
+    align-items: center;
+    display: flex;
+    gap: 1.44375em;
+  }
+
+  &__result-title {
+    font-size: 1.125em;
+  }
+}

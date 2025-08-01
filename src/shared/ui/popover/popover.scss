@@ -1,0 +1,15 @@
+.popover {
+  position: relative;
+  &__trigger {
+    cursor: pointer;
+  }
+  &__content {
+    top: calc(100% + 5.6875em);
+    right: 0;
+    width: 26.3125em;
+    max-height:  21em;
+    overflow-y: auto;
+    position: absolute;
+    border: 1px solid #E3E3E3
+  }
+}

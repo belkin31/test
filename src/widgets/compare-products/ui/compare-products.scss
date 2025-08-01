@@ -1,0 +1,49 @@
+.compare-products {
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 3em;
+    color: #828286;
+  }
+  &__search-input {
+    flex: 1;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1.5em;
+    color: #C1C1C1;
+  }
+
+  &__table {
+    width: 100%;
+  }
+
+  &__preview {
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
+  }
+
+  &__preview-image {
+    max-height: 7.5em;
+    aspect-ratio: 1/1;
+  }
+
+  &__preview-wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: .5em;
+  }
+
+  &__cell {
+    &_thead {
+    }
+  }
+}

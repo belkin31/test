@@ -1,0 +1,44 @@
+.header {
+  border-bottom: 1px solid #A6A5A9;
+
+  &__content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding:  1.25em;
+    max-width: 69.375em;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  &__parts {
+    display: flex;
+    align-items: center;
+
+    &_user {
+      gap: 3em;
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    padding: 1.1875em;
+    gap: 1.1875em;
+  }
+
+  &__user-text,  &__title-text {
+    font-size: .75em;
+    font-weight: 900;
+  }
+
+  &__title-text {
+    text-transform: uppercase;
+  }
+
+  &__parts-text {
+    font-size: 1.125em;
+    font-weight: 900;
+    color: #0D5ADC;
+  }
+}

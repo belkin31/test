@@ -1,0 +1,52 @@
+<div class="compare-products">
+  <div class="compare-products__header">
+    <h2 class="compare-products__title">{{currentCategory}}</h2>
+    <div class="compare-products__filter">
+      {{$t('SHOW_PRODUCT')}}
+
+    </div>
+  </div>
+  <div class="compare-products__body">
+    <table class="compare-products__table">
+      <thead class="compare-products__thead">
+        <tr class="compare-products__row">
+          <td class="compare-products__cell compare-products__cell_thead">
+            <input type="checkbox">
+            {{$t('SHOW_DIFFERENCES')}}
+          </td>
+          <td v-for="item in getSelectedProducts" :key="item?.id" class="compare-products__cell compare-products__cell_thead">
+            <div class="compare-products__preview-wrapper">
+              <div class="compare-products__preview">
+                <img :src="item?.['product-image']" :alt="item?.['product-name']" class="compare-products__preview-image">
+                <Popover>
+                  <template #trigger>
+                    <img :src="ChevronIconSrc" >
+                  </template>
+                  <template #content>
+                    <SearchProducts>
+                      <template #search="{onSearch}">
+                        <input class="compare-products__search-input" :placeholder="$t('SEARCH')" @input="onSearch">
+                      </template>
+                    </SearchProducts>
+                  </template>
+                </Popover>
+              </div>
+              <span>{{item?.['product-name']}}</span>
+            </div>
+          </td>
+        </tr>
+      </thead>
+      <tbody class="compare-products__tbody">
+
+      <tr v-for="params in allProductParameters" class="compare-products__row">
+        <td class="compare-products__cell compare-products__cell_tbody">
+          {{params}}
+        </td>
+        <td v-for="item in getSelectedProducts" :key="item?.id" class="compare-products__cell compare-products__cell_thead">
+          {{item?.[params]}}
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
