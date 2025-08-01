@@ -5,14 +5,14 @@
   <div class="search-products__result" v-if="filteredProducts?.length">
     <ul class="search-products__result-list">
       <li v-for="product in filteredProducts" :key="product.id" class="search-products__result-list-item">
-        <slot name="product-action" v-bind="product"></slot>
+        <slot name="product-action" v-bind="{product}"></slot>
         <div class="search-products__result-image-container">
-          <slot name="product-image" v-bind="product">
+          <slot name="product-image" v-bind="{product}">
             <img class="search-products__result-image" :src="product?.['product-image']" :alt="product?.['product-name']">
           </slot>
         </div>
 
-        <slot name="product-name" v-bind="product">
+        <slot name="product-name" v-bind="{product}">
           <span class="search-products__result-title">
             {{ product?.['product-name'] }}
           </span>

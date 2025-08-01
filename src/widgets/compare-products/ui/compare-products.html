@@ -1,52 +1,123 @@
 <div class="compare-products">
   <div class="compare-products__header">
-    <h2 class="compare-products__title">{{currentCategory}}</h2>
+    <h2 class="compare-products__title">{{ currentCategory }}</h2>
     <div class="compare-products__filter">
-      {{$t('SHOW_PRODUCT')}}
-
+      {{ $t('SHOW_PRODUCT') }} :
+      <span class="compare-products__filter-item"
+        v-for="index in (maxCompareColumn - minCompareColumn + 1)"
+        :key="index"
+        @click="onClickCompareCounter(minCompareColumn + index - 1)"
+      >
+        {{ minCompareColumn + index - 1 }}
+      </span>
     </div>
   </div>
   <div class="compare-products__body">
-    <table class="compare-products__table">
-      <thead class="compare-products__thead">
-        <tr class="compare-products__row">
-          <td class="compare-products__cell compare-products__cell_thead">
-            <input type="checkbox">
-            {{$t('SHOW_DIFFERENCES')}}
-          </td>
-          <td v-for="item in getSelectedProducts" :key="item?.id" class="compare-products__cell compare-products__cell_thead">
-            <div class="compare-products__preview-wrapper">
-              <div class="compare-products__preview">
-                <img :src="item?.['product-image']" :alt="item?.['product-name']" class="compare-products__preview-image">
-                <Popover>
-                  <template #trigger>
-                    <img :src="ChevronIconSrc" >
-                  </template>
-                  <template #content>
-                    <SearchProducts>
-                      <template #search="{onSearch}">
-                        <input class="compare-products__search-input" :placeholder="$t('SEARCH')" @input="onSearch">
-                      </template>
-                    </SearchProducts>
-                  </template>
-                </Popover>
-              </div>
-              <span>{{item?.['product-name']}}</span>
+    <div class="compare-products__table">
+      <div class="compare-products__row-wrapper compare-products__row-wrapper_head">
+        <div class="compare-products__row compare-products__row">
+          <div class="compare-products__cell compare-products__cell--header" >
+            <div class="compare-products__cell-text" 
+            :style="`--cell-count: ${getSelectedProducts?.length + 1}`">
+              <input type="checkbox" v-model="showDifferences">
+              {{ $t('SHOW_DIFFERENCES') }}
             </div>
-          </td>
-        </tr>
-      </thead>
-      <tbody class="compare-products__tbody">
+          </div>
+          <div 
+            v-for="(item, index) in getSelectedProducts" 
+            :key="item?.id" 
+            class="compare-products__cell compare-products__cell--header"
+          >
+          <div v-if="item?.id === -1" :style="`--cell-count: ${getSelectedProducts?.length + 1}`" class="compare-products__cell-text">
+            <Popover >
+              <template #trigger>
+                <div class="compare-products__preview-skeleton">
+                  +
+                </div>
+              </template>
+              <template #content>
+                <SearchProducts>
+                  <template #product-action="{product}">
+                    <img @click="setIdByIndex(index, product?.id)" :src="DifferentArrowColoredIconSrc">
+                  </template>
+                  <template #search="{ onSearch }">
+                    <input 
+                      class="compare-products__search-input" 
+                      :placeholder="$t('SEARCH')" 
+                      @input="onSearch"
+                    >
+                  </template>
+                </SearchProducts>
+              </template>
+            </Popover>
+          </div>
+            <div v-else class="compare-products__cell-text" 
+            :style="`--cell-count: ${getSelectedProducts?.length + 1}`">
+              <div  class="compare-products__preview-wrapper">
+                <div class="compare-products__preview">
+                  <img 
+                    :src="item?.['product-image']" 
+                    :alt="item?.['product-name']" 
+                    class="compare-products__preview-image"
+                  >
+                  <Popover>
+                    <template #trigger>
+                      <img :src="ChevronIconSrc">
+                    </template>
+                    <template #content>
+                      <SearchProducts>
+                        <template #product-action="{product}">
+                          <img @click="setIdByIndex(index, product?.id)" :src="DifferentArrowColoredIconSrc">
+                        </template>
+                        <template #search="{ onSearch }">
+                          <input 
+                            class="compare-products__search-input" 
+                            :placeholder="$t('SEARCH')" 
+                            @input="onSearch"
+                          >
+                        </template>
+                      </SearchProducts>
+                    </template>
+                  </Popover>
+                </div>
+                <span>{{ item?.['product-name'] }}</span>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
 
-      <tr v-for="params in allProductParameters" class="compare-products__row">
-        <td class="compare-products__cell compare-products__cell_tbody">
-          {{params}}
-        </td>
-        <td v-for="item in getSelectedProducts" :key="item?.id" class="compare-products__cell compare-products__cell_thead">
-          {{item?.[params]}}
-        </td>
-      </tr>
-      </tbody>
-    </table>
+      <div class="compare-products__row-wrapper compare-products__row-wrapper_body">
+        <div 
+          v-for="params in filteredProductParameters" 
+          :key="params" 
+          class="compare-products__row compare-products__row"
+        >
+          <div 
+            class="compare-products__cell compare-products__cell--body" 
+          >
+            <span :style="`--cell-count: ${getSelectedProducts?.length + 1}`" class="compare-products__cell-text">
+              {{ $t(params.toUpperCase().replaceAll("-", "_")) }}
+            </span>
+          </div>
+          <div 
+            v-for="item in getSelectedProducts" 
+            :key="item?.id" 
+            class="compare-products__cell compare-products__cell--body"
+          >
+            <span v-if="typeof item?.[params] === 'boolean'">
+              <img v-if="item?.[params]" :src="SuccessColoredIconSrc">
+              <img v-else :src="CrossColoredIconSrc">
+            </span>
+            <span v-else>
+              <span :style="`--cell-count: ${getSelectedProducts?.length + 1}`" class="compare-products__cell-text">
+                {{ item?.[params] }}
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

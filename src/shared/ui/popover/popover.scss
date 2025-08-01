@@ -1,10 +1,11 @@
 .popover {
   position: relative;
+  flex: 1;
   &__trigger {
     cursor: pointer;
   }
   &__content {
-    top: calc(100% + 5.6875em);
+    top: 100%;
     right: 0;
     width: 26.3125em;
     max-height:  21em;
