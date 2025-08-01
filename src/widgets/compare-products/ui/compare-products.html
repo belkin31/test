@@ -97,7 +97,7 @@
           <div 
             class="compare-products__cell compare-products__cell--body" 
           >
-            <span :style="`--cell-count: ${getSelectedProducts?.length + 1}`" class="compare-products__cell-text">
+            <span :style="`--cell-count: ${getSelectedProducts?.length + 1}`" class="compare-products__cell-text compare-products__cell-text_overflow">
               {{ $t(params.toUpperCase().replaceAll("-", "_")) }}
             </span>
           </div>
@@ -111,7 +111,7 @@
               <img v-else :src="CrossColoredIconSrc">
             </span>
             <span v-else>
-              <span :style="`--cell-count: ${getSelectedProducts?.length + 1}`" class="compare-products__cell-text">
+              <span :style="`--cell-count: ${getSelectedProducts?.length + 1}`" class="compare-products__cell-text compare-products__cell-text_overflow">
                 {{ item?.[params] }}
               </span>
             </span>

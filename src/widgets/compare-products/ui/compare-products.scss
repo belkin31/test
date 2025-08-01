@@ -62,10 +62,13 @@
 
   &__cell-text {
     width: calc(($width - $padding * 4) / var(--cell-count) - 1em);
-    overflow: hidden;
     display: inline-block;
     text-overflow: ellipsis;
     white-space: nowrap;
+
+    &_overflow {
+      overflow: hidden;
+    }
   }
 
   &__preview {
