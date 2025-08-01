@@ -23,7 +23,7 @@ export default defineComponent({
   setup() {
     const currentCategory = ref('Смартфоны');
     const productStore = useProductStore();
-    const selectedProductIds = ref<(number | null)[]>([1, 3, 5, null, null]);
+    const selectedProductIds = ref<(number | null)[]>([1, 3, 5]);
     const showDifferences = ref(false);
     const { getProductById } = productStore;
 
@@ -32,7 +32,7 @@ export default defineComponent({
       selectedProductIds.value.forEach((id): void => {
         if (id) {
           const product = getProductById(id);
-          products.push(product || null); // Обработка случая, если getProductById вернет undefined
+          products.push(product || null);
         } else {
           products.push({
             'id': -1,
